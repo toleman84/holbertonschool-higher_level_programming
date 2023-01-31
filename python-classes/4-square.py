@@ -11,10 +11,12 @@ class Square:
         self.size = size
 
     """ property to retrieve it """
+    @property
     def size(self):
-        return(self.size)
+        return(self.__size)
 
     """ class Square difinition """
+    @size.setter
     def size(self, value):
         """ size of a side of square """
         if type(value) != int:
@@ -22,10 +24,10 @@ class Square:
         elif value < 0:
             raise TypeError("size must be >= 0")
         else:
-            self.size = size
+            self.__size = value
 
     """ Public instance method """
     def area(self):
         if type(self.size) != int:
             raise TypeError("size must be an integer")
-        return(self.size**2)
+        return(self.__size**2)
