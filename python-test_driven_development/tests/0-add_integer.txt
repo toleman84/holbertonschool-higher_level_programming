@@ -1,0 +1,37 @@
+"""
+This is a file test for 0-add_integer
+
+"""
+
+First import method to test
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+Success Cases:
+
+Test ints and floats:
+    >>> print(add_integer(1, 2))
+    3
+
+    >>> print(add_integer(100, -2))
+    98
+
+    >>> print(add_integer(100.3, -2))
+    98,3
+
+Test use of default b= 98 value:
+
+    >>> print(add_integer(2))
+    100
+
+Fail cases:
+
+    >>> print(add_integer(4, "School"))
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> print(add_integer(None))
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
