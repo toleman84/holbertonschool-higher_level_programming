@@ -25,8 +25,6 @@ class Square:
 
     """ Public instance method """
     def area(self):
-#        if type(self.size) != int:
-#            raise TypeError("size must be an integer")
         return(self.__size**2)
 
     """  that prints in stdout the square with the character # """
