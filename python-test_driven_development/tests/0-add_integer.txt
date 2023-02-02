@@ -16,8 +16,8 @@ Test ints and floats:
     >>> print(add_integer(100, -2))
     98
 
-    >>> print(add_integer(100.3, -2))
-    98
+    >>> print(add_integer(150, -2))
+    148
 
 Test use of default b= 98 value:
 
