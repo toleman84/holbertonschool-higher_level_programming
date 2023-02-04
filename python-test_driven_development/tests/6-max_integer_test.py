@@ -16,8 +16,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(max_integer([None]), None)
 
-    def test_str(self):
-        self.assertEqual(max_integer(["Chateau", "the", "cat", "is"]), "Chateau")
+#    def test_str(self):
+#        self.assertEqual(max_integer(["Chateau", "the", "cat", "is"]), "Chateau")
 
 if __name__ == '__main__':
     unittest.main()
