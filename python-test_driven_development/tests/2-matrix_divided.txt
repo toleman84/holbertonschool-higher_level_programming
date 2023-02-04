@@ -15,8 +15,6 @@ Success Cases:
 
 >>> matrix_divided(matrix, 3)
 
->>> matrix
-
 >>> matrix_divided(matrix, float('inf'))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
