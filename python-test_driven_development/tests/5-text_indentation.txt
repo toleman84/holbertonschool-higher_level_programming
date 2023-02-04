@@ -1,0 +1,28 @@
+"""
+This is a file test for 5-text_indentation.py
+
+"""
+
+First import method to test
+text_indentation = __import__('5-text_indentation').text_indentation
+
+Cases:
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+
+    >>> text_indentation(5.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation("I? am. Gus:")
+    I?
+    <BLANKLINE>
+    am.
+    <BLANKLINE>
+    Gus:
+    <BLANKLINE>
