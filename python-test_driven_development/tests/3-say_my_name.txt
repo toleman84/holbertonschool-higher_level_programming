@@ -1,0 +1,24 @@
+"""
+This is a file test for 3-say_my_name.py
+
+"""
+
+First import method to test
+say_my_name = __import__('3-say_my_name').say_my_name
+
+Success Cases:
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+>>> say_my_name("Bob")
+My name is Bob 
+
+Fail Cases:
+
+>>> say_my_name("Gus", 70)
+Traceback (most recent call last):
+TypeError: last_name must be a string
