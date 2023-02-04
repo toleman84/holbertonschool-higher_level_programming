@@ -1,0 +1,44 @@
+"""
+This is a file test for 4-print_square.py
+
+"""
+
+First import method to test
+print_square = __import__('4-print_square').print_square
+
+
+Success Cases:
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(1)
+    #
+
+Fail Cases:
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square("4")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
