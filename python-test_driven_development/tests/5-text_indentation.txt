@@ -4,7 +4,7 @@ This is a file test for 5-text_indentation.py
 """
 
 First import method to test
-text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Cases:
 
