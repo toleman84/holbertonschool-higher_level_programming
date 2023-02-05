@@ -13,18 +13,20 @@ class TestMaxInteger(unittest.TestCase):
     def test_one(self):
         self.assertEqual(max_integer([4]), 4)
 
+    def test_two(self):
+        self.assertEqual(max_integer("stef"), "t")
+
     def test_empty(self):
         self.assertEqual(max_integer([None]), None)
 
-#    def test_str(self):
-#        self.assertEqual(max_integer(["Chateau", "the", "cat", "is"]), "Chateau")
+    def test_str(self):
+        self.assertEqual(max_integer(["Chateau", "the", "cat"]), "Chateau")
 
     def test_empty(self):
         self.assertEqual(max_integer([]), None)
 
-#    def test_max_at_begginning(self):
-#        max_at_beginning = [4, 3, 2, 1]
-#        self.assertEqual(max_integer(max_at_beginning), 4)
+    def test_negative(self):
+        self.assertEqual(max_integer([-1, -2, 4]), 4)
 
 if __name__ == '__main__':
     unittest.main()
