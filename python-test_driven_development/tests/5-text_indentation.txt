@@ -26,3 +26,5 @@ Cases:
     <BLANKLINE>
     Gus:
     <BLANKLINE>
+
+    >>> text_indentation(" ")
