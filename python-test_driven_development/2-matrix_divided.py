@@ -7,10 +7,12 @@
 def matrix_divided(matrix, div):
 
     """ must be a list of lists of integers or floats """
-    if isinstance(matrix, list) is not True or not all((isinstance(ele, int)
-    or isinstance(ele, float)) for ele in [num for row in matrix for num in row]):
+    if isinstance(matrix, list) is not True or
+    not all((isinstance(i, int) or
+            isinstance(i, float))
+            for i in [num for row in matrix for num in row]):
         raise TypeError('matrix must be a matrix (list of lists) of integers/'
-                         'floats')
+                        'floats')
 
     """ must be of the same size """
     if not all(len(row) == len(matrix[0]) for row in matrix):
