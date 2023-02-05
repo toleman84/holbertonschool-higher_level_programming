@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([None]), None)
 
     def test_str(self):
-        self.assertEqual(max_integer(["Chateau", "the", "cat"]), "Chateau")
+        self.assertEqual(max_integer(["stef", "cat", "is"]), "stef")
 
     def test_empty(self):
         self.assertEqual(max_integer([]), None)
