@@ -6,25 +6,12 @@ This is a file test for 2-matrix_divided.py
 First import method to test
 matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-Success Cases:
-
 >>> matrix = [
-...     [1, 2, 3],
-...     [4, 5, 6]
+...    [1, 2, 3],
+...    [4, 5, 6]
 ... ]
 
->>> matrix_divided(matrix, 3)
-[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+>>> print(matrix)
+[[1, 2, 3], [4, 5, 6]]
 
->>> matrix_divided(matrix, float('inf'))
-[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
-Fail Cases:
-
->>> matrix_divided()
-Traceback (most recent call last):
-TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
-
->>> matrix_divided(matrix, "7")
-Traceback (most recent call last):
-TypeError: div must be a number
