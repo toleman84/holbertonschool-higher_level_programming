@@ -4,7 +4,7 @@ This is a file test for 3-say_my_name.py
 """
 
 First import method to test
-say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Success Cases:
 
