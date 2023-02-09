@@ -6,4 +6,5 @@
 
 
 class BaseGeometry:
+    """ Write an empty class """
     pass
