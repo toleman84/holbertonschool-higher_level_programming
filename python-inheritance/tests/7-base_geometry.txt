@@ -1,0 +1,37 @@
+"""
+This is a file test for 0-add_integer
+
+"""
+
+First import method to test
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("gus", "10")
+Traceback (most recent call last):
+TypeError: gus must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("gus", 0)
+Traceback (most recent call last):
+ValueError: gus must be greater than 0
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("gus")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> a = BaseGeometry()
+>>> a.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> a = BaseGeometry()
+>>> a.integer_validator(None, None)
+Traceback (most recent call last):
+TypeError: None must be an integer
+
+>>> a = BaseGeometry()
+>>> a.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
