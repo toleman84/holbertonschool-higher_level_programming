@@ -35,3 +35,23 @@ TypeError: None must be an integer
 >>> a.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("stef", {2, 3})
+Traceback (most recent call last):
+TypeError: stef must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("age", True)
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("age", [4])
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("age", (4,))
+Traceback (most recent call last):
+TypeError: age must be an integer
