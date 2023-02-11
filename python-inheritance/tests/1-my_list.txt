@@ -11,6 +11,7 @@ First import method to test
 >>> my_list.extend([2, 3])
 >>> a = my_list.print_sorted()
 [1, 2, 3]
+
 >>> print(a)
 None
 
@@ -29,3 +30,7 @@ None
 >>> my_list.append(float('-inf'))
 >>> my_list.print_sorted()
 [-inf, 2]
+
+>>> new_list = []
+>>> print(new_list)
+[]
