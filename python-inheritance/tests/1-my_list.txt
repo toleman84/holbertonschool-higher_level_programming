@@ -6,30 +6,91 @@ This is a file test for 0-add_integer
 First import method to test
 >>> MyList = __import__('1-my_list').MyList
 
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.extend([2, 3])
->>> a = my_list.print_sorted()
-[1, 2, 3]
+>>> a = MyList()
 
->>> print(a)
+>>> a.append(8)
+>>> a.append(9)
+>>> a.print_sorted()
+
+[8, 9]
+
+-----------
+
+>>> a = MyList()
+>>> a.append(8)
+>>> a.extend([9, 10])
+>>> a.print_sorted()
+[8, 9, 10]
+
+-----------
+
+>>> a = MyList()
+>>> a.append(8)
+>>> a.extend([9, 10])
+>>> b = a.print_sorted()
+[8, 9, 10]
+>>> print(b)
 None
 
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.extend([2, 3])
->>> print(my_list)
-[1, 2, 3]
+-----------
 
->>> my_list = MyList()
->>> my_list.print_sorted()
+>>> a = MyList()
+>>> a.append(3)
+>>> a.extend([2, 1])
+>>> print(a)
+[3, 2, 1]
+
+-----------
+
+>>> a = MyList()
+>>> a.append(-3)
+>>> a.extend([-2, -1])
+>>> a.print_sorted()
+[-3, -2, -1]
+
+-----------
+
+>>> a = MyList()
+>>> a.print_sorted()
 []
 
->>> my_list = MyList()
->>> my_list.append(2)
->>> my_list.append(float('-inf'))
->>> my_list.print_sorted()
-[-inf, 2]
+-----------
+
+>>> a = MyList()
+>>> a.append(8)
+>>> a.append(9)
+>>> a.pop()
+9
+
+-----------
+
+>>> a = MyList()
+>>> a.append(2)
+>>> a.append(-1)
+>>> print(a)
+[2, -1]
+>>> a.print_sorted()
+[-1, 2]
+>>> print(a)
+[2, -1]
+
+-----------
+
+>>> a = MyList()
+>>> a.append(8)
+>>> a.append(float('inf'))
+>>> a.print_sorted()
+[8, inf]
+
+-----------
+
+>>> a = MyList()
+>>> a.append(9)
+>>> a.append(float('-inf'))
+>>> a.print_sorted()
+[-inf, 9]
+
+-----------
 
 >>> my_list = MyList()
 >>> my_list.append("Gus")
