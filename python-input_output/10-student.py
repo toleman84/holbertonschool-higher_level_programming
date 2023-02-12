@@ -16,6 +16,12 @@ class Student:
     def to_json(self, attrs=None):
         if isinstance(attrs, list):
             for elements in attrs:
-                return {k: v for k, v in self.__dict__.items() if k in attrs}
+                """
+                getattr():
+                returns the value of the named attribute of an object.
+                hasattr():
+                returns true/false if an object has the given attribute.
+                """
+                return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         else:
             return self.__dict__
