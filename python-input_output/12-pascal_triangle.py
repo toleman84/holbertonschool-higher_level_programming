@@ -7,6 +7,8 @@
 
 def pascal_triangle(n):
 
+    if n <= 0:
+        return []
     """ tri = triangle (max 79 chars) """
     tri = [[1]]
     for rows in range(n-1):
