@@ -18,13 +18,13 @@ class Rectangle(Base):
         super().__init__(id)
 
     @property
-    """ get width """
     def width(self):
+        """ get width """
         return self.__width
 
     @width.setter
-    """ set width """
     def width(self, width):
+        """ set width """
         if isinstance(width, int) is not True:
             raise TypeError('width must be an integer')
         elif width < 0:
@@ -33,13 +33,13 @@ class Rectangle(Base):
             self.__width = width
 
     @property
-    """ get height """
     def height(self):
+        """ get height """
         return self.__height
 
     @height.setter
-    """ set height """
     def height(self, height):
+        """ get height """
         if isinstance(height, int) is not True:
             raise TypeError('height must be an integer')
         elif height < 0:
