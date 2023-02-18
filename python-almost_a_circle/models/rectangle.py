@@ -8,9 +8,9 @@ from models.base import Base
 
 
 class Rectangle(Base):
-
+    """ Class constructor """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ class constructor """
+        """ Private instance attributes """
         self.width = width
         self.height = height
         self.x = x
@@ -18,10 +18,12 @@ class Rectangle(Base):
         super().__init__(id)
 
     @property
+    """ get width """
     def width(self):
         return self.__width
 
     @width.setter
+    """ set width """
     def width(self, width):
         if isinstance(width, int) is not True:
             raise TypeError('width must be an integer')
@@ -31,10 +33,12 @@ class Rectangle(Base):
             self.__width = width
 
     @property
+    """ get height """
     def height(self):
         return self.__height
 
     @height.setter
+    """ set height """
     def height(self, height):
         if isinstance(height, int) is not True:
             raise TypeError('height must be an integer')
@@ -44,6 +48,7 @@ class Rectangle(Base):
             self.__height = height
 
     def area(self):
+        """ area """
         return self.height * self.width
 
     print_symbol = '#'
@@ -60,6 +65,7 @@ class Rectangle(Base):
         return (''.join(string))
 
     def __str__(self):
+        """ return: """
         return('[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
                                                        self.x,
                                                        self.y,
@@ -67,6 +73,7 @@ class Rectangle(Base):
                                                        self.height))
 
     def update(self, *args, **kwargs):
+        """ public method """
         index = 0
         lenght = len(args)
 
@@ -75,15 +82,3 @@ class Rectangle(Base):
         self.height = args[2]
         self.x = args[3]
         self.y = args[4]
-
-
-
-# /////
-
-
-
-
-
-
-
-# /////
