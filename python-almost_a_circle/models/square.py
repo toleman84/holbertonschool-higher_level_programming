@@ -4,7 +4,7 @@ Square
 
 """
 
-import models.rectangle from Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -33,18 +33,18 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """update dict"""
-        if (len(args) is 0):
+        if (len(args) == 0):
 #            if (len(kwargs) is 0):
 #                raise TypeError("missing 2 required positional arguments:'width' and 'height")
             for (key, value) in kwargs.items():
-                if (key is 'id'):
+                if (key == 'id'):
                     self.id = value
-                if (key is 'size'):
+                if (key == 'size'):
                     self.width = value
                     self.height = value
-                if (key is 'x'):
+                if (key == 'x'):
                     self.x = value
-                if (key is 'y'):
+                if (key == 'y'):
                     self.y = value
         else:
             length = len(args)
@@ -61,3 +61,13 @@ class Square(Rectangle):
                 i += 1
             if (length > i):
                 self.y = args[3]
+
+    def to_dictionary(self):
+        """ dictionary """
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
