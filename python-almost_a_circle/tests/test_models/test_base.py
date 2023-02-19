@@ -36,7 +36,8 @@ class Test_to_json_string(unittest.TestCase):
 
     def test_dict(self):
         r1 = Rectangle(10, 2, 1, 9)
-        self.assertEqual(str(r1_dictionary), "{ 'id': 12}")
+        r1_dictionary = r1.to_dictionary()
+        self.assertEqual(str(r1_dictionary), "{'id': 4, 'width': 10, 'height': 2, 'x': 1, 'y': 9}")
 
 class Test_save_to_file(unittest.TestCase):
 
