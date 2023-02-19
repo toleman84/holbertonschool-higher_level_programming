@@ -92,7 +92,7 @@ class Rectangle(Base):
         for i in range(self.height):
             [print('', end='') for x in range(self.x)]
             [print('#', end='') for w in range(self.width)]
-            print('')    
+            print('')
 
     def __str__(self):
         """ return: """
@@ -105,8 +105,6 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """update dict"""
         if (len(args) == 0):
-#        if (len(kwargs) is 0):
-#            raise TypeError("missing 2 required positional arguments:'width' and 'height")
             for (key, value) in kwargs.items():
                 if (key == 'id'):
                     self.id = value

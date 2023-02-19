@@ -46,3 +46,26 @@ class Base:
         if json_string is None or json_string == '[]':
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes """
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        if cls.__name__ == 'Square':
+            dummy = cls(1)
+            dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """  """
+        new_lists = []
+        try:
+            with open('{}.json'.format(cls.__name__), 'r') as f:
+                list_dictionary = Base.from_json_string(f.read())
+                for i in list_dictionary:
+                    new_lists.append(cls.create(**i))
+                return new_lists
+        except Exception:
+            return []

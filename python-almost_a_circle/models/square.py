@@ -34,8 +34,6 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """update dict"""
         if (len(args) == 0):
-#            if (len(kwargs) is 0):
-#                raise TypeError("missing 2 required positional arguments:'width' and 'height")
             for (key, value) in kwargs.items():
                 if (key == 'id'):
                     self.id = value
