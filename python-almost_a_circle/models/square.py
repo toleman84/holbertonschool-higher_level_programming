@@ -19,17 +19,17 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """ set size """
-        self.width = size
-        self.heigth = size
+        self.width = value
+        self.heigth = value
 
     def __str__(self):
         """ str """
         return ('[Square] ({}) {}/{} - {}'.format(self.id,
                                                   self.x,
                                                   self.y,
-                                                  self.size))
+                                                  self.width))
 
     def update(self, *args, **kwargs):
         """update dict"""
@@ -64,8 +64,7 @@ class Square(Rectangle):
         """ dictionary """
         return {
             'id': self.id,
-            'width': self.width,
-            'height': self.height,
+            'size': self.width,
             'x': self.x,
             'y': self.y
         }

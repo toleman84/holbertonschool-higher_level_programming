@@ -34,6 +34,9 @@ class Test_to_json_string(unittest.TestCase):
         s = Square(10, 2, 3, 4)
         self.assertEqual(str, type(Base.to_json_string([s.to_dictionary()])))
 
+    def test_to_json_string_rectangle(self):
+        r = Rectangle(10, 7, 2, 8, 6)
+        self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
 
 class Test_save_to_file(unittest.TestCase):
 
