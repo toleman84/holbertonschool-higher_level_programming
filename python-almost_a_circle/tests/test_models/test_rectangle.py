@@ -18,10 +18,6 @@ class Test_instantiation(unittest.TestCase):
         r2 = Rectangle(2, 10)
         self.assertEqual(r1.id, r2.id - 1)
 
-#    def test_rectangle(self):
-#        self.assertRaices(ValueError, Rectangle, 0, 2)
-#        self.assertRaices(ValueError, Rectangle, 1, 0)
-
 
 class Test_width(unittest.TestCase):
 
