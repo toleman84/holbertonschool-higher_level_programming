@@ -40,7 +40,6 @@ class Test_y(unittest.TestCase):
             Square(1, 3, None)
 
 
-
 class Test_area(unittest.TestCase):
 
     def test_area(self):
