@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 for letters in range(122, 96, -1):
     if letters % 2 == 0:
-        print(letters)
+        print(chr(letters))
     else:
-        print(letters - 32)
+        letter = letters - 32
+        print(letter)
