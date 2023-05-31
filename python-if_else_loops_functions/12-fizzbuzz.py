@@ -2,8 +2,8 @@
 def fizzbuzz():
     for number in range(101):
         if number % 3:
-            print("Fizz")
+            print("Fizz", end="")
         elif number % 5:
-            print("Buzz")
+            print("Buzz", end="")
         elif number % 15:
-            print("FizzBuzz")
+            print("FizzBuzz", end="")
