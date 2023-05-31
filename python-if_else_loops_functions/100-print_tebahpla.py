@@ -4,4 +4,4 @@ for letters in range(122, 96, -1):
         print(chr(letters))
     else:
         letter = letters - 32
-        print(letter)
+        print(chr(letter))
