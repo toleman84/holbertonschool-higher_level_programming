@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    numbers = int(sys.argv)
+    numbers = sys.argv
+    num = int(numbers)
 
-    print(numbers)
+    print(num)
