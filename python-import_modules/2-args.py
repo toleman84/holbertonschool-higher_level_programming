@@ -8,3 +8,5 @@ if __name__ == "__main__":
         print("0 arguments.")
     elif lengh > 1:
         print("{} argument:".format(lengh - 1))
+        for arg in sys.argv:
+            print("{}".format(arg))
