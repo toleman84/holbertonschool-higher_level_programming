@@ -6,6 +6,6 @@ if __name__ == "__main__":
     for name in names:
         if not name.startswith("__"):
             sorted_names = name
-            for name in sorted_names:
-                print(name, end="")
-            print(" ")
+            #for name in sorted_names:
+            print(sorted_names, end="") #name
+        print(" ")
