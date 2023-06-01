@@ -7,4 +7,5 @@ if __name__ == "__main__":
         if not name.startswith("__"):
             sorted_names = name
             for name in sorted_names:
-                print(name, end=" ")
+                print(name, end="")
+            print(" ")
