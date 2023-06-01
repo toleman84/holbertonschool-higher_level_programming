@@ -7,4 +7,4 @@ if __name__ == "__main__":
     if lengh == 1:
         print("0 arguments.")
     elif lengh > 1:
-        print("{} argument:".format(lengh))
+        print("{} argument:".format(lengh - 1))
