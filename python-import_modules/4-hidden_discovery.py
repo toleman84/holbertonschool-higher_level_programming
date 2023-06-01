@@ -8,4 +8,4 @@ if __name__ == "__main__":
             sorted_names = name
             #for name in sorted_names:
             print(sorted_names, end="") #name
-        print(" ")
+    print(" ")
