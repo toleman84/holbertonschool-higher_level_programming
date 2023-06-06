@@ -2,5 +2,6 @@
 """comments"""
 def print_list_integer(my_list=[]):
     """print all integer of a list"""
+    str = "{}"
     for i in my_list:
-        print(format(i))
+        print(str.format(i))
