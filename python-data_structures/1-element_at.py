@@ -4,8 +4,8 @@ def element_at(my_list, idx):
     if idx < 0:
         return None
     #If idx is out of range (> of number of element in my_list), the function should return None
-    print(format(len(my_list)))
     if idx > len(my_list):
         return None
     #Write a function that retrieves an element from a list.
-    return my_list[idx]
+    for i in range(my_list):
+        print("Element at index {:d} is {}".format(idx, i))
