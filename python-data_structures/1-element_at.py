@@ -9,6 +9,6 @@ def element_at(my_list, idx):
         print("2")
         return None
     #Write a function that retrieves an element from a list.
-    for i in my_list:
+    for i in range(my_list):
         j = i[idx]
         print("Element at index {:d} is {}".format(idx, j))
