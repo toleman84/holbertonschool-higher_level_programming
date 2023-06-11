@@ -2,9 +2,9 @@
 def update_dictionary(a_dictionary, key, value):
     new_dict = []
     for k, v in a_dictionary:
-        if k:
+        if k == a_dictionary:
             new_dict[k].append(key)
-        if v:
+        if v == a_dictionary:
             new_dict[v].append(value)
     print(new_dict)
 
