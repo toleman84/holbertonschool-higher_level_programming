@@ -8,6 +8,9 @@ def roman_to_int(roman_string):
             'D': 500,
             'M': 1000}
 
+    if roman_string is None or len(roman_string) == 0:
+        return 0
+
     value = 0
     for i in range(len(roman_string)):
         if i > 0 and dict[roman_string[i]] > dict[roman_string[i - 1]]:
