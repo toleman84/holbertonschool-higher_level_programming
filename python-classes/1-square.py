@@ -10,7 +10,7 @@ class Square:
     Attributes:
         size
     """
-    def __init__(self, size):
+    def size(self, size):
         self.size = size
 
-Square.size()
+Square().size()
