@@ -3,7 +3,6 @@
 4. Access and update private attribute
 Write a class Square that defines a square by: (based on 3-square.py)
 """
-import sys
 
 
 class Square:
@@ -38,7 +37,7 @@ class Square:
 
     def my_print(self):
         """print doc"""
-        for i in range(self.__size):
-            print("#", file=sys.stdout)
         if self.__size == 0:
-            print()
+            print()        
+        for i in range(self.__size):
+            print("#")
