@@ -7,12 +7,10 @@ Write a class Square that defines a square by: (based on 3-square.py)
 
 class Square:
     """doc class"""
-    @property
     def size(self):
         """doc"""
         return self.__size
 
-    @property.setter
     def size(self, value):
         """doc"""
         self.value = value
