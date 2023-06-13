@@ -17,7 +17,7 @@ class Square:
         """doc"""
         self.__size = value
 
-        if type(self.__size) is not int:
+        if type(value) is not int:
             TypeError("size must be an integer")
         if value < 0:
             ValueError("size must be >= 0")
