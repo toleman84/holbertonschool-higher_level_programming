@@ -17,10 +17,10 @@ class Square:
         """doc"""
         self.__size = value
 
-        if type(value) != int:
-            TypeError("size must be an integer")
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
         if value < 0:
-            ValueError("size must be >= 0")
+            raise ValueError("size must be >= 0")
 
     def __init__(self, size=0):
         """Initialize self"""
