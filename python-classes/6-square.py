@@ -10,8 +10,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Instantiation with optional size and optional position:"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -21,9 +21,9 @@ class Square:
     @size.setter
     def size(self, value):
         """doc"""
-        if type(self.__size) is not int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
