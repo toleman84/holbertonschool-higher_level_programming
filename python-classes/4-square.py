@@ -13,7 +13,7 @@ class Square:
 
     def size(self, value):
         """doc"""
-        value = self.__size
+        self.value = value
 
         if type(value) is not int:
             TypeError("size must be an integer")
