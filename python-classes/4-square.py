@@ -15,6 +15,7 @@ class Square:
     @property.setter
     def size(self, value):
         """doc"""
+        self.value = value
         if type(self.__size) is not int:
             TypeError("size must be an integer")
         if self.__size < 0:
