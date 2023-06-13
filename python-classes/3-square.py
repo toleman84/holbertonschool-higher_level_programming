@@ -17,4 +17,5 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def area(self):
+        """area doc"""
         return self.__size * self.__size
