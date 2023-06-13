@@ -14,9 +14,10 @@ class Square:
     def size(self, value):
         """doc"""
         self.value = value
-        if type(self.__size) is not int:
+
+        if type(value) is not int:
             TypeError("size must be an integer")
-        if self.__size < 0:
+        if value < 0:
             ValueError("size must be >= 0")
 
     def __init__(self, size=0):
