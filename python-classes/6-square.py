@@ -7,6 +7,12 @@ Write a class Square that defines a square by: (based on 3-square.py)
 
 class Square:
     """doc class"""
+
+    def __init__(self, size=0, position=(0, 0)):
+        """Instantiation with optional size and optional position:"""
+        self.__size = size
+        self.__position = position
+
     @property
     def size(self):
         """doc"""
@@ -15,14 +21,12 @@ class Square:
     @size.setter
     def size(self, value):
         """doc"""
-        self.__size = value
-
         if type(self.__size) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
+        self.__size = value
 
-    # Private instance attribute: position:
     @property
     def position(self):
         """to retrieve it"""
@@ -31,24 +35,13 @@ class Square:
     @position.setter
     def position(self, value):
         """doc"""
-        self.__position = value
-
-        if type(value) != tuple or value[0] < 0 or value[1] < 0:
+        if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-
-    def __init__(self, size=0, position=(0, 0)):
-        """Instantiation with optional size and optional position:"""
-        self.__size = size
-        self.__position = position
-
-    def __init__(self, size=0):
-        """Initialize self"""
-        self.__size = size
-
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         """area doc"""
@@ -60,7 +53,7 @@ class Square:
             print()
         else:
             if self.__position[1] > 0:
-                print("" * self.__position[1], end="")
+                for i in range(self.__position[1]):
+                    print()
             for i in range(self.__size):
-                print(" " * self.__position[0], end="")
-                print("#" * self.__size)
+                print(" " * self.__position[0] + "#" * self.__size)
