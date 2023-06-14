@@ -18,7 +18,9 @@ Now use it:
     2
 
     >>> print(add_integer('a', 1))
+    Traceback (most recent call last):
     TypeError: a must be an integer
 
     >>> print(add_integer(1, 'b'))
+    Traceback (most recent call last):
     TypeError: b must be an integer
