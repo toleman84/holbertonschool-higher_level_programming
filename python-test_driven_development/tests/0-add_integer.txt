@@ -16,3 +16,9 @@ Now use it:
 
     >>> print(add_integer(1, 1))
     2
+
+    >>> print(add_integer(a))
+    TypeError: a must be an integer
+
+    >>> print(add_integer(b))
+    TypeError: b must be an integer
