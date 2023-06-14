@@ -11,5 +11,5 @@ This is an example text file in reStructuredText format.  First import
 
 Now use it:
 
-    >>> add_integer(1, 1)
+    >>> print(add_integer(1, 1))
     2
