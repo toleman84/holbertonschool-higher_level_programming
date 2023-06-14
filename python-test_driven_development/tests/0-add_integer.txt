@@ -37,9 +37,5 @@ Now use it:
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-    >>> print(add_integer(0,5, 1))
-    1,5
-
-    >>> print(add_integer(1a1))
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
+    >>> print(add_integer(0.5, 1))
+    1.5
