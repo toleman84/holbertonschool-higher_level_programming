@@ -10,7 +10,7 @@ Using ``factorial``
 This is an example text file in reStructuredText format.  First import
 ``factorial`` from the ``example`` module:
 
-    >>> from 0-add_integer.txt import add_integer
+    >>> add_integer = __import__("0-add_integer").add_integer
 
 Now use it:
 
