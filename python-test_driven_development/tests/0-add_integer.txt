@@ -1,9 +1,15 @@
-import unittest
-from 0-add_integer import add_integer
+The ``example`` module
+======================
 
+Using ``factorial``
+-------------------
 
-class TestAddInteger(unittest.TestCase):
-    
-    def test_add_integer(self):
-        result = add_integer(1, 1)
-        self.assertEqual(resultado 2)
+This is an example text file in reStructuredText format.  First import
+``factorial`` from the ``example`` module:
+
+    >>> from 0-add_integer import add_integer
+
+Now use it:
+
+    >>> add_integer(1, 1)
+    2
