@@ -1,0 +1,23 @@
+import doctest
+doctest.testfile("2-matrix_divided".txt")
+
+The ``example`` module
+======================
+
+Using ``name_function``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``name_function`` from the ``example`` module:
+
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Now use it:
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
