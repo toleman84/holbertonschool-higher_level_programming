@@ -23,6 +23,9 @@ Now use it:
     >>> print(add_integer(1^2))
     101
 
+    >>> print(add_integer(0.5, 1))
+    1
+
     >>> print(add_integer('a', 1))
     Traceback (most recent call last):
     TypeError: a must be an integer
@@ -42,9 +45,6 @@ Now use it:
     >>> print(add_integer(1, None))
     Traceback (most recent call last):
     TypeError: b must be an integer
-
-    >>> print(add_integer(0.5, 1))
-    1
 
     >>> add_integer(1000e1000, 1000e1000)
     Traceback (most recent call last):
