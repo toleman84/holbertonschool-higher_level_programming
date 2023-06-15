@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""doc"""
+"""documentation"""
 
 
 def add_integer(a, b=98):
-    """doc function"""
+    """doc for function"""
     
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
