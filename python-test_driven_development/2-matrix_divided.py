@@ -23,8 +23,8 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     # All elements of the matrix should be divided by div, rounded to 2 decimal places
-    for i in matrix:
-        for j in matrix[i]:
+    for i in len(matrix):
+        for j in len(matrix[i]):
             print("{:d}".format(matrix[i][j]), end='')
 
     # return new_matrix
