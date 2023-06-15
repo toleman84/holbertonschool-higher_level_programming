@@ -27,6 +27,8 @@ def matrix_divided(matrix, div):
 
     new_matrix = []
     for row in matrix:
+        if len(row) != len(matrix[0]):
+            raise TypeError("Each row of the matrix must have the same size")
         new_matrix_2 = []
         for numbers in row:
             result = numbers / div
