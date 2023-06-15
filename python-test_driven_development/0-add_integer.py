@@ -2,14 +2,14 @@
 def add_integer(a, b=98):
     """doc function"""
     
-    if isinstance(a, int) or isinstance(a, float):
-        a = int(a)
-    else:
+    if not isinstance(a, int) or not isinstance(a, float):
         raise TypeError("a must be an integer")
+    elif isinstance(b, float):
+        a = int(a)
 
-    if isinstance(b, int) or isinstance(b, float):
-        b = int(b)
-    else:
+    if not isinstance(b, int) or not isinstance(b, float):
         raise TypeError("b must be an integer")
+    elif isinstance(b, float):
+        b = int(b)
 
     return a + b
