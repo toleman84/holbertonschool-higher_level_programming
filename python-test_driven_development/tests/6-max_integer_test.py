@@ -22,5 +22,16 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer([1, 'a'])
 
+    def test_empty(self):
+        """test with letter"""
+        result = max_integer([])
+        self.assertEqual(result, None)
+
+    def test_negative(self):
+        """test with negative numbers"""
+        result = max_integer([-1, -10, -30, -50])
+        self.assertEqual(result, -1)
+
+
 if __name__ == "__main__":
     unittest.main()
