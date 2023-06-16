@@ -7,13 +7,11 @@ doc for module
 def print_square(size):
     """doc for function"""
 
-    if not isinstance(size, int):
+    if not isinstance(size, int) or isinstance(size, float) and size < 0:
         raise TypeError("size must be an integer")
 
     if size < 0:
         raise ValueError("size must be >= 0")
 
-    if isinstance(size, float) and size < 0:
-        raise TypeError("size must be an integer")
-
-    print("#" * size)
+    for i in range(size):
+        print("#" * size)
