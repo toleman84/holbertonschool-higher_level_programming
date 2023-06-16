@@ -1,7 +1,7 @@
 #!/usr/bin/pyhton3
-"""doc for module"""
+"""Write an empty class"""
 
 
 class Rectangle:
-    """doc for class"""
+    """define a class"""
     pass
