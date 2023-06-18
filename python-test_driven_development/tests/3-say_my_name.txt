@@ -27,6 +27,10 @@ Now use it:
     Traceback (most recent call last):
     TypeError("first_name must be a string")
 
+    >>> say_my_name("Walter", 12)
+    Traceback (most recent call last):
+    TypeError("last_name must be a string")
+
     >>> say_my_name(None, "Smith")
     Traceback (most recent call last):
     TypeError("first_name must be a string")
