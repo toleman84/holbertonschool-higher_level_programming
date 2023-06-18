@@ -10,19 +10,20 @@ def matrix_divided(matrix, div):
     """
     doc for function
     """
-    if not isinstance(matrix, list):
+    if not isinstance(matrix, list) and not isinstance(matrix, int)\
+            or not isinstance(matrix, list) and not isinstance(matrix, float):
         raise TypeError("matrix must be a matrix (list of lists)\
                         of integers/floats")
 
-    for len_matrix in matrix:
-        if len(len_matrix) != len(matrix[0]):
+    for row in matrix:
+        if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
 
-    if not isinstance(div, int) and not isinstance(div, float):
-        raise TypeError("div must be a number")
+        if not isinstance(div, int) and not isinstance(div, float):
+            raise TypeError("div must be a number")
 
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
+        if div == 0:
+            raise ZeroDivisionError("division by zero")
 
     new_matrix = []
     for row in matrix:
