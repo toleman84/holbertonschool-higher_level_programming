@@ -10,8 +10,7 @@ def matrix_divided(matrix, div):
     """
     doc for function
     """
-    if not isinstance(matrix, list) and not isinstance(matrix, int)\
-            or not isinstance(matrix, list) and not isinstance(matrix, float):
+    if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists)\
                         of integers/floats")
 
