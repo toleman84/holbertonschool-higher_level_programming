@@ -12,8 +12,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """doc for init function"""
-        self.height = height
         self.width = width
+        self.height = height
 
         """Incremented during each new instance instantiation"""
         Rectangle.number_of_instances += 1
