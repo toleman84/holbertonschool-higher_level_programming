@@ -10,10 +10,10 @@ def matrix_divided(matrix, div):
     """
     doc for function
     """
+    message = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(matrix, list) and not isinstance(matrix, int)\
             or not isinstance(matrix, list) and not isinstance(matrix, float):
-        raise TypeError(
-            "matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(message)
 
     for row in matrix:
         if len(row) != len(matrix[0]):
