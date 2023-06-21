@@ -33,27 +33,26 @@ Now use it:
     ##########
 
     >>> print_square(0)
-    <BLANKLINE>
 
     >>> print_square(1)
     #
 
     >>> print_square(-1)
     Traceback (most recent call last):
-    ValueError size must be >= 0
+    ValueError: size must be >= 0
 
     >>> print_square(1.1)
     Traceback (most recent call last):
-    TypeError size must be an integer
+    TypeError: size must be an integer
 
     >>> print_square(None)
     Traceback (most recent call last):
-    TypeError size must be an integer
+    TypeError: size must be an integer
 
     >>> print_square('t')
     Traceback (most recent call last):
-    TypeError size must be an integer
+    TypeError: size must be an integer
 
     >>> print_square(-402)
     Traceback (most recent call last):
-    ValueError size must be >= 0
+    ValueError: size must be >= 0

@@ -17,22 +17,22 @@ Now use it:
     >>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], 3))
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
-    >>> print(matrix_divided(None, 3))
-    Traceback (most recent call last):
-    TypeError matrix must be a matrix (list of lists) of integers/floats
-
     >>> print(matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 3))
     Traceback (most recent call last):
-    TypeError Each row of the matrix must have the same size
+    TypeError: Each row of the matrix must have the same size
 
     >>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], 'number'))
     Traceback (most recent call last):
-    TypeError div must be a number
+    TypeError: div must be a number
 
     >>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], 0))
     Traceback (most recent call last):
-    ZeroDivisionError division by zero
+    ZeroDivisionError: division by zero
 
     >>> matrix_divided([[1,2,3,'x']], 9)
     Traceback (most recent call last):
-    TypeError matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> print(matrix_divided(None, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
