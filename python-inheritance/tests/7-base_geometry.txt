@@ -47,6 +47,11 @@ must be an integer
 
 must be greater than 0
 
+    >>> bd = BaseGeometry()
+    >>> bd.integer_validator("age", False)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("width", 0)
     Traceback (most recent call last):
