@@ -21,17 +21,17 @@ must be an integer
     TypeError: width must be an integer
 
     >>> bd = BaseGeometry()
-    >>> bg.integer_validator(None, None)
+    >>> bg.integer_validator("width", [9])
     Traceback (most recent call last):
-    TypeError: None must be an integer
+    TypeError: width must be an integer
 
     >>> bd = BaseGeometry()
     >>> bg.integer_validator("width", (98,))
     Traceback (most recent call last):
     TypeError: width must be an integer
 
-    >>> bd = BaseGeometry()
-    >>> bg.integer_validator("width", [9])
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", "height")
     Traceback (most recent call last):
     TypeError: width must be an integer
 
@@ -39,6 +39,11 @@ must be an integer
     >>> bd.integer_validator("width", None)
     Traceback (most recent call last):
     TypeError: width must be an integer
+
+    >>> bd = BaseGeometry()
+    >>> bg.integer_validator(None, None)
+    Traceback (most recent call last):
+    TypeError: None must be an integer
 
 must be greater than 0
 
