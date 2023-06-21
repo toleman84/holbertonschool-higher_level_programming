@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-"""_summary_
-"""
+"""doc"""
 
 
 class MyList(list):
-    """_summary_
-    that prints the list, but sorted (ascending sort)
-    Args:
-        list (_type_): _description_
-    """
+    """that prints the list, but sorted (ascending sort)"""
     def print_sorted(self):
-        """_summary_
-        """
+        """doc"""
         print(sorted(self))
