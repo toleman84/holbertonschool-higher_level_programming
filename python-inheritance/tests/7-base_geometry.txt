@@ -46,6 +46,11 @@ ValueError: width must be greater than 0
 Traceback (most recent call last):
 TypeError: width must be an integer
 
+>>> bd = BaseGeometry
+>>> bd.integer_validator("width", (3, 4))
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
 >>> bd = BaseGeometry()
 >>> bg.integer_validator("width", [9])
 Traceback (most recent call last):
