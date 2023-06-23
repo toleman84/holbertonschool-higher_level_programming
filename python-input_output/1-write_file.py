@@ -4,5 +4,6 @@
 
 def write_file(filename="", text=""):
     """doc"""
-    with open(filename, "r", encoding="utf-8") as file:
-        file.write(text)
+    with open(filename, "w", encoding="utf-8") as file:
+        numbers = file.write(text)
+        return numbers
