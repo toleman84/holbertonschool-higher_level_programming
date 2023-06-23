@@ -25,31 +25,31 @@ Now use it:
 
     >>> say_my_name(12, "White")
     Traceback (most recent call last):
-    TypeError("first_name must be a string")
+    TypeError: first_name must be a string
 
     >>> say_my_name("Walter", 12)
     Traceback (most recent call last):
-    TypeError("last_name must be a string")
+    TypeError: last_name must be a string
 
     >>> say_my_name(12, 21)
     Traceback (most recent call last):
-    TypeError("first_name must be a string")
+    TypeError: first_name must be a string
 
     >>> say_my_name(None, "Smith")
     Traceback (most recent call last):
-    TypeError("first_name must be a string")
+    TypeError: first_name must be a string
 
     >>> say_my_name("John", None)
     Traceback (most recent call last):
-    TypeError("last_name must be a string")
+    TypeError: last_name must be a string
 
     >>> say_my_name(None)
     Traceback (most recent call last):
-    TypeError("first_name must be a string")
+    TypeError: first_name must be a string
 
     >>> say_my_name(None, None)
     Traceback (most recent call last):
-    TypeError("first_name must be a string")
+    TypeError: first_name must be a string
 
     >>> say_my_name()
     Traceback (most recent call last):
