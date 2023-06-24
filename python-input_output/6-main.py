@@ -26,7 +26,3 @@ try:
     print(type(my_fake))
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
-
-[1, 2, 3]
-{"name": "John", "places": ["San Francisco", "Tokyo"], "id": 12, "info": {"average": 3.14, "age": 36}, "is_active": true}
-{"is_active": true, 12 }
