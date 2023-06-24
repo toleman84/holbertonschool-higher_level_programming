@@ -10,7 +10,7 @@ filename = "ad_item.json"
 
 try:
     obj = load_from_json_file(filename)
-except Exception:
+except FileNotFoundError:
     obj = []
 for i in range(1, len(sys.argv)):
     obj.append(sys.argv[i])
