@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """doc"""
 
-class_to_json = __import__("8-class_to_json").class_to_json
-
 
 class Student:
     """class Student that defines a student by:"""
