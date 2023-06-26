@@ -118,5 +118,4 @@ class Rectangle(Base):
         Returns:
             _type_: _description_
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/\
-            {self.__y} - {self.__width}/{self.__heigth}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__heigth}"
