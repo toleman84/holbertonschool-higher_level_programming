@@ -110,7 +110,10 @@ class Rectangle(Base):
     def display(self):
         """_summary_
         """
-        [print('#' * self.__width) for i in range(self.__heigth)]
+        for y in range(self.__y):
+            print()
+        for i in range(self.__heigth):
+            print(' ' * self.x + '#' * self.__width)
 
     def __str__(self):
         """_summary_
