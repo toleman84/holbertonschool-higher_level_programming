@@ -128,3 +128,11 @@ class Rectangle(Base):
         h = self.__heigth
 
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h))
+
+    def update(self, *args):
+        """_summary_
+        """
+        attributes = ['id', 'width', 'height', 'x', 'y']
+
+        for i, arguments in enumerate(args):
+            setattr(self, attributes[i], arguments)
