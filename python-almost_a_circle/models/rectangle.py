@@ -33,17 +33,17 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         """_summary_
 
         Args:
-            width (_type_): _description_
+            value (_type_): _description_
         """
-        if not isinstance(width, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if width <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = width
+        self.__width = value
 
     @property
     def heigth(self):
@@ -52,17 +52,17 @@ class Rectangle(Base):
         return self.__heigth
 
     @heigth.setter
-    def heigth(self, heigth):
+    def heigth(self, value):
         """_summary_
 
         Args:
-            heigth (_type_): _description_
+            value (_type_): _description_
         """
-        if not isinstance(heigth, int):
+        if not isinstance(value, int):
             raise TypeError("heigth must be an integer")
-        if heigth <= 0:
+        if value <= 0:
             raise ValueError("heigth must be > 0")
-        self.__heigth = heigth
+        self.__heigth = value
 
     @property
     def x(self):
@@ -71,17 +71,17 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, x):
+    def x(self, value):
         """_summary_
 
         Args:
-            x (_type_): _description_
+            value (_type_): _description_
         """
-        if not isinstance(x, int):
+        if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        if x < 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -90,17 +90,17 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, y):
+    def y(self, value):
         """_summary_
 
         Args:
-            y (_type_): _description_
+            value (_type_): _description_
         """
-        if not isinstance(y, int):
+        if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        if y < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = y
+        self.__y = value
 
     def area(self):
         """_summary_
@@ -110,10 +110,8 @@ class Rectangle(Base):
     def display(self):
         """_summary_
         """
-        for y in range(self.__y):
-            print()
-        for i in range(self.__heigth):
-            print(' ' * self.x + '#' * self.__width)
+        [print() for y in range(self.__y)]
+        [print(' '*self.x + '#'*self.__width) for i in range(self.__heigth)]
 
     def __str__(self):
         """_summary_
