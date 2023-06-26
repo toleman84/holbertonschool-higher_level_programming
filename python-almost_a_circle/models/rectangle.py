@@ -129,9 +129,11 @@ class Rectangle(Base):
 
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """_summary_
         """
         attr = ['id', 'width', 'height', 'x', 'y']
-
-        [setattr(self, attr[i], arg) for i, arg in enumerate(args)]
+        if args:
+            [setattr(self, attr[i], arg) for i, arg in enumerate(args)]
+        elif kwargs:
+            [setattr(self, k, v) for k, v in kwargs.items()]
