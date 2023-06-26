@@ -116,6 +116,12 @@ class Rectangle(Base):
         """_summary_
 
         Returns:
-            _type_: _description_
+            _type_: _[Rectangle] (<id>) <x>/<y> - <width>/<height>_
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__heigth}"
+        id = self.id
+        x = self.__x
+        y = self.__y
+        w = self.__width
+        h = self.__heigth
+
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h))
