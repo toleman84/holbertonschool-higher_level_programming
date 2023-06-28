@@ -30,6 +30,6 @@ class Base:
             list_dictionaries (_type_): _description_
         """
         if list_dictionaries is None:
-            return []
+            list_dictionaries = []
         else:
             return json.dumps(list_dictionaries)
