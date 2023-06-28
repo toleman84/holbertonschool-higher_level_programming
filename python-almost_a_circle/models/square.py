@@ -63,3 +63,13 @@ class Square(Rectangle):
             [setattr(self, attr[i], arg) for i, arg in enumerate(args)]
         elif kwargs:
             [setattr(self, k, v) for k, v in kwargs.items()]
+
+    def to_dictionary(self):
+        """_summary_
+        """
+        dictionary = {}
+        dictionary['id'] = self.id
+        dictionary['size'] = self.size
+        dictionary['x'] = self.x
+        dictionary['y'] = self.y
+        return dictionary
