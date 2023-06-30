@@ -16,7 +16,7 @@ class Base:
             self (_type_): _self object_
             id (_type_, optional): _id_. Defaults to None.
         """
-        if id is not None:
+        if id:
             self.id = id
         else:
             Base.__nb_objects += 1
