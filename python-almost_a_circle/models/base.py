@@ -57,4 +57,5 @@ class Base:
         """doc"""
         if json_string is None:
             json_string = []
-        return json.loads(json_string)
+        else:
+            return json.loads(json_string)
