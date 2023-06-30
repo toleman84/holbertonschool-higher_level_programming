@@ -28,6 +28,21 @@ class TestBase(unittest.TestCase):
         self.assertTrue(Base(), self.id == 1)
         self.assertTrue(Base(), self.id == 2)
 
+    def test_private_attr_access(self):
+        """Test private attr are not accessible"""
+        with self.assertRaises(AttributeError):
+            print(Base.__nb_objects)
+            print(Base.nb_objects)
+
+    def test_invalid_args(self):
+        """Test"""
+        with self.assertRaises(TypeError):
+            Base(50, 50)
+
+    def test_class(self):
+        """Test class"""
+        self.assertTrue(Base(100), self.__class__ == Base)
+
 
 if __name__ == "__main__":
     unittest.main()
