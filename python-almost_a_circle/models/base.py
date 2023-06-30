@@ -51,3 +51,10 @@ class Base:
 
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(cls.to_json_string(objs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """doc"""
+        if json_string is None:
+            json_string = []
+        return json.loads(json_string)
