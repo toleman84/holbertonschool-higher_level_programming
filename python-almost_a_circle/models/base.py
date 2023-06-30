@@ -16,11 +16,10 @@ class Base:
             self (_type_): _self object_
             id (_type_, optional): _id_. Defaults to None.
         """
-        if id:
-            self.id = id
-        else:
+        if id is None:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            id = Base.__nb_objects
+        self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
