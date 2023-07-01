@@ -56,7 +56,7 @@ class Base:
     def from_json_string(json_string):
         """doc"""
         if json_string is None:
-            json_string = []
+            json_string = "[]"
         return json.loads(json_string)
 
     @classmethod
@@ -73,10 +73,10 @@ class Base:
     def load_from_file(cls):
         """doc"""
         list_of_instances = []
-        filename = cls.__name__ + ".json"
-        if not filename:
+        filenam = cls.__name__ + ".json"
+        if not filenam:
             return []
-        with open(filename, "r") as file:
+        with open(filenam, "r") as file:
             instances = cls.from_json_string(file.read())
         for ob, dic in enumerate(instances):
             list_of_instances.append(cls.create(**instances[ob]))

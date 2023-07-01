@@ -10,9 +10,9 @@ class Rectangle(Base):
     Args:
         Base (_type_): _description_
     """
-    def __init__(self, width, heigth, x=0, y=0, id=None):
-        """_summary_
 
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """_summary_
         Args:
             width (_type_): _description_
             heigth (_type_): _description_
@@ -21,7 +21,7 @@ class Rectangle(Base):
             id (_type_, optional): _description_. Defaults to None.
         """
         self.width = width
-        self.heigth = heigth
+        self.height = height
         self.x = x
         self.y = y
         super().__init__(id)
@@ -46,23 +46,23 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    def heigth(self):
+    def height(self):
         """_summary_
         """
-        return self.__heigth
+        return self.__height
 
-    @heigth.setter
-    def heigth(self, value):
+    @height.setter
+    def height(self, value):
         """_summary_
 
         Args:
             value (_type_): _description_
         """
         if not isinstance(value, int):
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("heigth must be > 0")
-        self.__heigth = value
+            raise ValueError("height must be > 0")
+        self.__height = value
 
     @property
     def x(self):
@@ -105,13 +105,13 @@ class Rectangle(Base):
     def area(self):
         """_summary_
         """
-        return self.__width * self.__heigth
+        return self.__width * self.__height
 
     def display(self):
         """_summary_
         """
         [print() for y in range(self.__y)]
-        [print(' '*self.x + '#'*self.__width) for i in range(self.__heigth)]
+        [print(' '*self.x + '#'*self.__width) for i in range(self.__height)]
 
     def __str__(self):
         """_summary_
@@ -123,18 +123,41 @@ class Rectangle(Base):
         x = self.__x
         y = self.__y
         w = self.__width
-        h = self.__heigth
+        h = self.__height
 
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h))
 
     def update(self, *args, **kwargs):
         """_summary_
         """
-        attr = ['id', 'width', 'height', 'x', 'y']
+        """attr = ['id', 'width', 'height', 'x', 'y']
         if args:
             [setattr(self, attr[i], arg) for i, arg in enumerate(args)]
         elif kwargs:
-            [setattr(self, k, v) for k, v in kwargs.items()]
+            [setattr(self, k, v) for k, v in kwargs.items()]"""
+        if args:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
         """_summary_
@@ -142,7 +165,7 @@ class Rectangle(Base):
         dictionary = {}
         dictionary['id'] = self.id
         dictionary['width'] = self.width
-        dictionary['height'] = self.heigth
+        dictionary['height'] = self.height
         dictionary['x'] = self.x
         dictionary['y'] = self.y
         return dictionary
