@@ -73,10 +73,10 @@ class Base:
     def load_from_file(cls):
         """doc"""
         list_of_instances = []
-        filenam = cls.__name__ + ".json"
-        if not filenam:
-            return []
-        with open(filenam, "r") as file:
+        filename = cls.__name__ + ".json"
+        if not filename:
+            return "[]"
+        with open(filename, "r") as file:
             instances = cls.from_json_string(file.read())
         for ob, dic in enumerate(instances):
             list_of_instances.append(cls.create(**instances[ob]))
