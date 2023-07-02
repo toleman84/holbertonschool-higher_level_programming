@@ -17,7 +17,7 @@ class Test_square(unittest.TestCase):
         """
         attr = Square(20, 2, 3, 99)
         self.assertTrue(attr.width == 20)
-        self.assertTrue(attr.heigth == 20)
+        self.assertTrue(attr.height == 20)
         self.assertTrue(attr.size == 20)
         self.assertTrue(attr.x == 2)
         self.assertTrue(attr.y == 3)
@@ -28,7 +28,7 @@ class Test_square(unittest.TestCase):
         """
         attr = Square(20)
         self.assertTrue(attr.width == 20)
-        self.assertTrue(attr.heigth == 20)
+        self.assertTrue(attr.height == 20)
         self.assertTrue(attr.size == 20)
         self.assertTrue(attr.x == 0)
         self.assertTrue(attr.y == 0)
@@ -83,9 +83,9 @@ class Test_square(unittest.TestCase):
         """
         s = Square(1, 2, 3, 4)
         s.update(10, 10, 10, 10)
-        self.assertEqual(str(s), '[Square] (10) 10/3 - 10')
+        self.assertEqual(str(s), '[Square] (10) 10/10 - 10')
         s.update(99)
-        self.assertEqual(str(s), '[Square] (99) 10/3 - 10')
+        self.assertEqual(str(s), '[Square] (99) 10/10 - 10')
 
     def test_to_dictionary(self):
         """_summary_

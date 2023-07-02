@@ -17,7 +17,7 @@ class Test_rectangle(unittest.TestCase):
         """
         attr = Rectangle(20, 30, 2, 3, 99)
         self.assertTrue(attr.width == 20)
-        self.assertTrue(attr.heigth == 30)
+        self.assertTrue(attr.height == 30)
         self.assertTrue(attr.x == 2)
         self.assertTrue(attr.y == 3)
         self.assertTrue(attr.id == 99)
