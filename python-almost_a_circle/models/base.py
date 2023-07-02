@@ -76,8 +76,11 @@ class Base:
         filename = cls.__name__ + ".json"
         if not filename:
             return "[]"
-        with open(filename, "r") as file:
-            instances = cls.from_json_string(file.read())
-        for ob, dic in enumerate(instances):
-            list_of_instances.append(cls.create(**instances[ob]))
+        try:
+            with open(filename, "r") as file:
+                instances = cls.from_json_string(file.read())
+            for ob, dic in enumerate(instances):
+                list_of_instances.append(cls.create(**instances[ob]))
+        except Exception:
+            pass
         return list_of_instances
