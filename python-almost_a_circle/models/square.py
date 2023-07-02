@@ -39,7 +39,7 @@ class Square(Rectangle):
             value (_type_): _description_
         """
         self.width = value
-        self.heigth = value
+        self.height = value
 
     def __str__(self):
         """_summary_
