@@ -3,7 +3,10 @@
 """
 import unittest
 from models import base
+from models import rectangle
+import os
 Base = base.Base
+Rectangle = rectangle.Rectangle
 
 
 class TestBase(unittest.TestCase):
@@ -16,6 +19,12 @@ class TestBase(unittest.TestCase):
         """_summary_
         """
         pass
+
+    def tearDown(self):
+        try:
+            os.remove("Rectangle.json")
+        except Exception:
+            pass
 
     def test_id_given(self):
         """_summary_

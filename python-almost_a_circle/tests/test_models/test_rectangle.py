@@ -76,6 +76,15 @@ class Test_rectangle(unittest.TestCase):
         r = Rectangle(20, 30, 2, 3, 99)
         self.assertEqual(str(r), '[Rectangle] (99) 2/3 - 20/30')
 
+    def test_to_dictionary(self):
+        """_summary_
+        """
+        rdic = Rectangle(20, 30, 2, 3, 99).to_dictionary()
+        self.assertEqual(type(rdic), dict)
+        r2 = Rectangle(10, 10)
+        r2.update(**rdic)
+        self.assertEqual(str(r2), '[Rectangle] (99) 2/3 - 20/30')
+
 
 if __name__ == "__main__":
     unittest.main()
