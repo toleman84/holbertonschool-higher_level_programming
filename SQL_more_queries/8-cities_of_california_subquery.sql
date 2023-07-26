@@ -3,4 +3,4 @@
 SELECT id, name,
 FROM hbtn_0d_usa.states,
 WHERE state_id = 1,
-ORDER BY cities.id ASC;
+ORDER BY id ASC;
