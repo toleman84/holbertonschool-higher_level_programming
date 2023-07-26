@@ -2,5 +2,5 @@
 
 SELECT cities.id, cities.name
 FROM hbtn_0d_usa.cities
-WHERE cities.state_id = 1
+WHERE cities.state_id = (SELECT id FROM states WHERE name = California)
 ORDER BY id ASC;
