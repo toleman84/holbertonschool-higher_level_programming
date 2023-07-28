@@ -3,6 +3,5 @@
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
 INNER JOIN tv_show_genres
-IFNULL(tv_show_genres.genre_id, NULL)
-ON tv_shows.id = tv_show_genres.show_id
+ON tv_shows.id = tv_show_genres.show_id WHERE IFNULL(tv_show_genres.genre_id, NULL)
 ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
