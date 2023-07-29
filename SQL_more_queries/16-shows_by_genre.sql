@@ -11,4 +11,4 @@ ON tv_show_genres.genre_id = tv_genres.id
 
 WHERE tv_show_genres.genre_id IS NULL
 
-ORDER BY tv_show.title ASC, tv_genres.name ASC;
+ORDER BY tv_shows.title ASC, tv_genres.name ASC;
