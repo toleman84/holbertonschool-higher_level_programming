@@ -10,13 +10,9 @@ if __name__ == '__main__':
                          passwd=sys.argv[2],
                          database=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name='{}' \
+    cur.execute("SELECT * FROM states WHERE BINARY name='{}' \
                 ORDER BY states.id ASC".format(sys.argv[4]))
     rows = cur.fetchall()
-
-    if rows is None:
-        cur.close()
-        db.close()
 
     for row in rows:
         print("{}".format(row))
