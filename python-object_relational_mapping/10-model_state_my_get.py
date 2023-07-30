@@ -15,4 +15,6 @@ if __name__ == "__main__":
     session = Session()
     for states in session.query(State).filter(State.name == sys.argv[4]):
         print("{}".format(states.id))
+    if sys.argv[4] is None:
+        print('Not found')
     session.close()
