@@ -18,8 +18,12 @@ if __name__ == '__main__':
                 ORDER BY cities.id ASC""".format(sys.argv[4]))
     rows = cur.fetchall()
 
+    count = 0
     for row in rows:
         print("{}".join(row), end="")
+        count += 1
+        if count < len(rows):
+            print(", ", end="")
 
     cur.close()
     db.close()
