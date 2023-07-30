@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     count = 0
     for row in rows:
-        print("{}".join(row), end="")
+        print("".join(row), end="")
         count += 1
         if count < len(rows):
             print(", ", end="")
