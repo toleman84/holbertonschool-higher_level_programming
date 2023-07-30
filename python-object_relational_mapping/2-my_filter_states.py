@@ -14,6 +14,10 @@ if __name__ == '__main__':
                 ORDER BY states.id ASC".format(sys.argv[4]))
     rows = cur.fetchall()
 
+    if rows is None:
+        cur.close()
+        db.close()
+
     for row in rows:
         print("{}".format(row))
 
