@@ -14,7 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        states = session.query(State).filter(State.name == sys.argv[4].one())
+        states = session.query(State).filter(State.name == sys.argv[4]).one()
         print("{}".format(states.id))
     except:
         print('Not found')
