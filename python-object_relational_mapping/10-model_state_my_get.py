@@ -16,6 +16,6 @@ if __name__ == "__main__":
     for states in session.query(State).filter(State.name == sys.argv[4]):
         print("{}".format(states.id))
     arg = len(sys.argv[4])
-    if arg is 0:
+    if arg == 0:
         print('Not found')
     session.close()
