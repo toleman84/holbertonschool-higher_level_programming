@@ -10,8 +10,9 @@ if __name__ == '__main__':
                          passwd=sys.argv[2],
                          database=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name=%s \
-                ORDER BY states.id ASC".format(sys.argv[4]))
+    cur.execute("""SELECT * FROM states
+                   WHERE name=%s
+                   ORDER BY states.id ASC""".format(sys.argv[4]))
     rows = cur.fetchall()
 
     if rows is None:
