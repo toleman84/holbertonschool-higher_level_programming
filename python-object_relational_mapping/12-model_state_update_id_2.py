@@ -14,10 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    post = State(id=2)
-    session.add(post)
+    states = session.query(State).filter(State.id == 2)
+    states.name = 'New Mexico'
     session.commit()
-
-    print("{}".format(post.id))
-
     session.close()
