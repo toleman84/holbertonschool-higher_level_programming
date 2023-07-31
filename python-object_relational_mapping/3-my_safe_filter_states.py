@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""SQL Injection..."""
-import sys
+"""script that lists all states from the database hbtn_0e_0_usa"""
 import MySQLdb
-
+import sys
 
 if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost',
@@ -11,12 +10,16 @@ if __name__ == '__main__':
                          passwd=sys.argv[2],
                          database=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT id, name FROM states WHERE name='{}' \
+    cur.execute("SELECT * FROM states WHERE BINARY name='{}' \
                 ORDER BY states.id ASC".format(sys.argv[4]))
     rows = cur.fetchall()
 
+    if rows is None:
+        cur.close()
+        db.close()
+
     for row in rows:
-        print(row)
+        print("{}".format(row))
 
     cur.close()
     db.close()
