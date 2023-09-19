@@ -10,6 +10,6 @@ $.ajax({
     const helloTranslation = data.hello;
 
     // Display the translation of "hello" in the DIV#hello element
-    helloDiv.text(helloTranslation);
+    $("#hello").text(data.hello);
   }
 });
