@@ -1,4 +1,4 @@
-# Higher-Level Programming Repository 🐍
+# Higher-Level Programming Repository
 
 Welcome to the **Higher-Level Programming** repository! This is a collection of projects developed during my time at Holberton School as part of the curriculum focusing on Python, SQL, Object-Oriented Programming, and web development.
 
